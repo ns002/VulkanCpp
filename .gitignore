@@ -18,7 +18,7 @@
 mono_crash.*
 
 # Build results
-
+[Bb]uild/
 
 # Build results on 'Bin' directories
 **/[Bb]in/*
