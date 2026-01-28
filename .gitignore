@@ -192,3 +192,4 @@ MigrationBackup/
 *.msix
 *.msm
 *.msp
+VulkanEngine/log.txt

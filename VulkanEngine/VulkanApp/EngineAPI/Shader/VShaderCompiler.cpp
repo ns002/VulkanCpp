@@ -75,8 +75,8 @@ namespace VWrapper
 	{
 		switch (command)
 		{
-		case ShaderType::VERTEX:	return VERTEX_COMMANDLINE;
-		case ShaderType::FRAGMENT:	return FRAGMENT_COMMANDLINE;
+		case ShaderType::VERTEX:	return VERTEX_COMMANDLINE  (ShaderCompiler::FindGls(glslc));
+		case ShaderType::FRAGMENT:	return FRAGMENT_COMMANDLINE(ShaderCompiler::FindGls(glslc));
 		//why would i want a default path?
 		default: return "";		//untested
 		}
@@ -107,5 +107,29 @@ namespace VWrapper
 		{
 			throw std::runtime_error((std::string("Failed to execute shadercommand. Details:\n ") + e.what() + "\n  Also Check if the path above is correct.  You can change them in 'CompileSettings.inl'").c_str());
 		}
+	}
+
+	std::optional<std::filesystem::path> ShaderCompiler::FindGls(const char* exe) {
+
+		// 1. Try VULKAN_SDK
+		if (const char* sdk = std::getenv("VULKAN_SDK")) {
+			std::filesystem::path p = std::filesystem::path(sdk) / "Bin" / exe;
+			if (std::filesystem::exists(p))
+				return std::filesystem::canonical(p);
+		}
+
+		// 2. Fallback: search PATH
+		if (const char* pathEnv = std::getenv("PATH")) {
+			std::stringstream ss(pathEnv);
+			std::string dir;
+
+			while (std::getline(ss, dir, path_sep)) {
+				std::filesystem::path p = std::filesystem::path(dir) / exe;
+				if (std::filesystem::exists(p))
+					return std::filesystem::canonical(p);
+			}
+		}
+
+		return std::nullopt;
 	}
 }

@@ -23,6 +23,7 @@ namespace VWrapper
 
 	private:
 
+		static std::optional<std::filesystem::path> FindGls(const char* exe);
 		static void FileSystemCheck() noexcept(false);							//attempting to create a folder to place spv files if this does not yet exist
 		static const std::string GetCommand(const ShaderType& command);
 		static int ExecuteCommand(const char* command) noexcept(false);
