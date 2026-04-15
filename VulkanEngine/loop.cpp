@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "VulkanApp/VulkanApp.h"
-#include "VulkanApp/EngineAPI/Core.h"
-#include "VulkanApp/EngineAPI/Rendering/RenderPipeline.h"
+#include "VulkanApp/Engine/Core.h"
+#include "VulkanApp/Engine/Rendering/RenderPipeline.h"
 
 namespace VWrapper
 {

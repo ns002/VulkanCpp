@@ -105,21 +105,21 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="txtLog.h" />
     <ClInclude Include="vec.h" />
-    <ClInclude Include="VulkanApp\EngineAPI\Core.h" />
-    <ClInclude Include="VulkanApp\EngineAPI\Device\DeviceHandler.h" />
-    <ClInclude Include="VulkanApp\EngineAPI\Device\LogicalDevice.h" />
-    <ClInclude Include="VulkanApp\EngineAPI\Device\PhysicalDevice.h" />
-    <ClInclude Include="VulkanApp\EngineAPI\Device\SupportStructure.h" />
-    <ClInclude Include="VulkanApp\EngineAPI\Rendering\Mesh.h" />
-    <ClInclude Include="VulkanApp\EngineAPI\Rendering\ObjectBuffer\vBuffer.h" />
-    <ClInclude Include="VulkanApp\EngineAPI\Rendering\ObjectBuffer\Vertex.h" />
-    <ClInclude Include="VulkanApp\EngineAPI\Rendering\RenderPipeline.h" />
-    <ClInclude Include="VulkanApp\EngineAPI\Rendering\SwapChain.h" />
-    <ClInclude Include="VulkanApp\EngineAPI\Shader\Shader.h" />
-    <ClInclude Include="VulkanApp\EngineAPI\Shader\ShaderHandler.h" />
-    <ClInclude Include="VulkanApp\EngineAPI\Shader\ShaderType.h" />
-    <ClInclude Include="VulkanApp\EngineAPI\Shader\VShaderCompiler.h" />
-    <ClInclude Include="VulkanApp\EngineAPI\Validation.h" />
+    <ClInclude Include="VulkanApp\Engine\Core.h" />
+    <ClInclude Include="VulkanApp\Engine\Device\DeviceHandler.h" />
+    <ClInclude Include="VulkanApp\Engine\Device\LogicalDevice.h" />
+    <ClInclude Include="VulkanApp\Engine\Device\PhysicalDevice.h" />
+    <ClInclude Include="VulkanApp\Engine\Device\SupportStructure.h" />
+    <ClInclude Include="VulkanApp\Engine\Rendering\Mesh.h" />
+    <ClInclude Include="VulkanApp\Engine\Rendering\ObjectBuffer\vBuffer.h" />
+    <ClInclude Include="VulkanApp\Engine\Rendering\ObjectBuffer\Vertex.h" />
+    <ClInclude Include="VulkanApp\Engine\Rendering\RenderPipeline.h" />
+    <ClInclude Include="VulkanApp\Engine\Rendering\SwapChain.h" />
+    <ClInclude Include="VulkanApp\Engine\Shader\Shader.h" />
+    <ClInclude Include="VulkanApp\Engine\Shader\ShaderHandler.h" />
+    <ClInclude Include="VulkanApp\Engine\Shader\ShaderType.h" />
+    <ClInclude Include="VulkanApp\Engine\Shader\VShaderCompiler.h" />
+    <ClInclude Include="VulkanApp\Engine\Validation.h" />
     <ClInclude Include="VulkanApp\stb_image.h" />
     <ClInclude Include="VulkanApp\tiny_obj_loader.h" />
     <ClInclude Include="VulkanApp\VulkanApp.h" />
@@ -132,27 +132,27 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="VulkanApp\EngineAPI\Core.cpp" />
-    <ClCompile Include="VulkanApp\EngineAPI\Device\DeviceHandler.cpp" />
-    <ClCompile Include="VulkanApp\EngineAPI\Device\LogicalDevice.cpp" />
-    <ClCompile Include="VulkanApp\EngineAPI\Device\PhysicalDevice.cpp" />
-    <ClCompile Include="VulkanApp\EngineAPI\Rendering\Mesh.cpp" />
-    <ClCompile Include="VulkanApp\EngineAPI\Rendering\ObjectBuffer\vBuffer.cpp" />
-    <ClCompile Include="VulkanApp\EngineAPI\Rendering\RenderPipeline.cpp" />
-    <ClCompile Include="VulkanApp\EngineAPI\Rendering\SwapChain.cpp" />
-    <ClCompile Include="VulkanApp\EngineAPI\Shader\Shader.cpp" />
-    <ClCompile Include="VulkanApp\EngineAPI\Shader\ShaderHandler.cpp" />
-    <ClCompile Include="VulkanApp\EngineAPI\Shader\VShaderCompiler.cpp" />
-    <ClCompile Include="VulkanApp\EngineAPI\Validation.cpp" />
+    <ClCompile Include="VulkanApp\Engine\Core.cpp" />
+    <ClCompile Include="VulkanApp\Engine\Device\DeviceHandler.cpp" />
+    <ClCompile Include="VulkanApp\Engine\Device\LogicalDevice.cpp" />
+    <ClCompile Include="VulkanApp\Engine\Device\PhysicalDevice.cpp" />
+    <ClCompile Include="VulkanApp\Engine\Rendering\Mesh.cpp" />
+    <ClCompile Include="VulkanApp\Engine\Rendering\ObjectBuffer\vBuffer.cpp" />
+    <ClCompile Include="VulkanApp\Engine\Rendering\RenderPipeline.cpp" />
+    <ClCompile Include="VulkanApp\Engine\Rendering\SwapChain.cpp" />
+    <ClCompile Include="VulkanApp\Engine\Shader\Shader.cpp" />
+    <ClCompile Include="VulkanApp\Engine\Shader\ShaderHandler.cpp" />
+    <ClCompile Include="VulkanApp\Engine\Shader\VShaderCompiler.cpp" />
+    <ClCompile Include="VulkanApp\Engine\Validation.cpp" />
     <ClCompile Include="VulkanApp\VulkanApp.cpp" />
     <ClCompile Include="VulkanApp\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\startup.frag" />
     <None Include="Shaders\startup.vert" />
-    <None Include="VulkanApp\EngineAPI\Extensions&amp;Layers.inl" />
-    <None Include="VulkanApp\EngineAPI\Rendering\ObjectBuffer\vBuffer.inl" />
-    <None Include="VulkanApp\EngineAPI\Shader\CompileSettings.inl" />
+    <None Include="VulkanApp\Engine\Extensions&amp;Layers.inl" />
+    <None Include="VulkanApp\Engine\Rendering\ObjectBuffer\vBuffer.inl" />
+    <None Include="VulkanApp\Engine\Shader\CompileSettings.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
